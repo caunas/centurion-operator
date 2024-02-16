@@ -5,7 +5,7 @@ from time import sleep
 rsc.clear_terminal()
 
 while True:
-    print("Centurion Operator (BETA)")
+    rsc.tittle()
     print("""
           1. Calcular dano
           2. Porcentagem simples
