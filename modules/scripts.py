@@ -1,14 +1,14 @@
-#import dependencies
+#importando dependências
 from random import randint
 from time import sleep
 
-#simple percent
+#porcentagem simples
 def percnt(part, total_qtd):
     result = (part / 100) * total_qtd
     
     return round(result)
 
-#percentage of damage reduct
+#calcular reduçao de dano
 def calcArmor(armor):
     shield = (armor / (armor + 100)) * 100
     
@@ -20,6 +20,7 @@ def calcDmg(dmg_positive, dmg_negative):
     
     return round(damage)
 
+#rolar dados
 def rollDice(times_roll, dice_sides):
     print(f"Rolando {times_roll}d{dice_sides}... \n")
     
