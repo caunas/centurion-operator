@@ -15,7 +15,7 @@ while True:
     request = int(input("Selecione uma opção: "))
     rsc.clear_terminal()
     
-    #calc damage
+    #calc dano
     if request == 1:
         
         dmg_inject = int(input("Dano aplicado: "))
@@ -28,6 +28,7 @@ while True:
         input("Pressione qualquer tecla para continuar...")
         
         rsc.clear_terminal()
+        
     #calcular porcentagem    
     elif request == 2:
         total_qtd = int(input("Insira a quantidade a ser calculada: "))
@@ -47,7 +48,8 @@ while True:
         response = scr.rollDice(dice_rolls, dice_sides)
         
         while True:
-            dmg_request = input("Deseja seguir para calcular o dado de dano? (y/n) ")
+            dmg_request = input("Deseja seguir para calcular o dado de dano (Y/N)? ")
+            dmg_request = dmg_request.lower()
             if dmg_request == 'y':
                 
                 dmg_inject = response
