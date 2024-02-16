@@ -41,12 +41,34 @@ while True:
         rsc.clear_terminal()
     
     elif request == 3:
-        dice_sides = int(input("Quantos lados o dado tem? "))
         dice_rolls = int(input("Quantas vezes quer rolar o dado? "))
+        dice_sides = int(input("Quantos lados o dado tem? "))
         
-        scr.rollDice(dice_rolls, dice_sides)
+        response = scr.rollDice(dice_rolls, dice_sides)
         
-        input("Pressione qualquer tecla para continuar...")
+        while True:
+            dmg_request = input("Deseja seguir para calcular o dado de dano? (y/n) ")
+            if dmg_request == 'y':
+                
+                dmg_inject = response
+                
+                print(f'\nDano aplicado: {dmg_inject}')
+                
+                dmg_block = int(input("Armadura ou Resistência Mágica:"))
+                dmg_bypass = int(input("Letalidade ou Penetração Mágica: "))
+                
+                response = scr.calcDmg(dmg_inject, scr.calcArmor(dmg_block - dmg_bypass))
+                
+                print(f"\nDano total recebido: {response} \n")
+                input("Pressione qualquer tecla para continuar...")
+                
+                break
+            elif dmg_request == 'n':
+                break
+            else:
+                print(f"Opção Inválida, tente novamente.")
+                continue
+            
         rsc.clear_terminal()
         
     #error 01
