@@ -22,8 +22,17 @@ def calcDmg(dmg_positive, dmg_negative):
 
 def rollDice(times_roll, dice_sides):
     print(f"Rolando {times_roll}d{dice_sides}... \n")
+    
     sleep(1)
+    
+    dice_sum = 0
+    
     for i in  range(times_roll, 0, -1):
         dice_result = randint(0, dice_sides)
+        dice_sum = dice_sum + dice_result
         print(dice_result)
+    
     print('\n')
+    print(f'Soma dos dados: {dice_sum}')
+    
+    return dice_sum
