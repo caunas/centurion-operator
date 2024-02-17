@@ -29,7 +29,7 @@ def rollDice(times_roll, dice_sides):
     dice_sum = 0
     
     for i in  range(times_roll, 0, -1):
-        dice_result = randint(0, dice_sides)
+        dice_result = randint(1, dice_sides)
         dice_sum = dice_sum + dice_result
         print(dice_result)
     
