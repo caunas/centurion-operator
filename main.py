@@ -32,7 +32,7 @@ while True:
     #calcular porcentagem    
     elif request == 2:
         total_qtd = int(input("Insira a quantidade a ser calculada: "))
-        part = int(input("Insira a porcentagem a ser calculada: "))
+        part = int(input(f"Quantos porcento de {total_qtd} você quer calcular? "))
         
         response = scr.percent(part, total_qtd)
         
@@ -56,7 +56,7 @@ while True:
                 
                 print(f'\nDano aplicado: {dmg_inject}')
                 
-                dmg_block = int(input("Armadura ou Resistência Mágica:"))
+                dmg_block = int(input("Armadura ou Resistência Mágica: "))
                 dmg_bypass = int(input("Letalidade ou Penetração Mágica: "))
                 
                 response = scr.calcDmg(dmg_inject, scr.calcArmor(dmg_block - dmg_bypass))

@@ -3,7 +3,7 @@ from random import randint
 from time import sleep
 
 #porcentagem simples
-def percnt(part, total_qtd):
+def percent(part, total_qtd):
     result = (part / 100) * total_qtd
     
     return round(result)
