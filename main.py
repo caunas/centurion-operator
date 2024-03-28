@@ -2,10 +2,10 @@
 from modules import scripts as scr, resources as rsc
 from time import sleep
 
+rsc.initialize()
 rsc.clear_terminal()
 
 while True:
-    rsc.tittle()
     print("""
           1. Calcular dano
           2. Porcentagem simples
@@ -41,6 +41,7 @@ while True:
         
         rsc.clear_terminal()
     
+    #roll dice
     elif request == 3:
         dice_rolls = int(input("Quantas vezes quer rolar o dado? "))
         dice_sides = int(input("Quantos lados o dado tem? "))
