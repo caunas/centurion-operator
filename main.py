@@ -10,14 +10,17 @@ while True:
           1. Calcular dano
           2. Porcentagem simples
           3. Role um dado
+          
+          0. Sair
 """)
     
     request = int(input("Selecione uma opção: "))
     rsc.clear_terminal()
     
     #calc dano
-    if request == 1:
-        
+    if request == 0:
+        exit()
+    elif request == 1:
         dmg_inject = int(input("Dano aplicado: "))
         dmg_block = int(input("Armadura ou Resistência Mágica: "))
         dmg_bypass = int(input("Letalidade ou Penetração Mágica: "))
