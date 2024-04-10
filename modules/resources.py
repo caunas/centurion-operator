@@ -4,7 +4,7 @@ from time import sleep
 
 #clear the terminal command
 def clear_terminal():
-    os.system('cls' if os.name == 'nt' else clear)
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def tittle():
     print("""
