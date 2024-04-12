@@ -47,7 +47,13 @@ while True:
     #roll dice
     elif request == 3:
         dice_rolls = int(input("Quantas vezes quer rolar o dado? "))
-        dice_sides = int(input("Quantos lados o dado tem? "))
+        while True:
+            dice_sides = int(input("Quantos lados o dado tem? "))
+            if(dice_sides % 2 != 0):
+                print("Erro: Número de dados inválido. Tente Novamente.")
+                continue
+            else:
+                break
         
         response = scr.rollDice(dice_rolls, dice_sides)
         
