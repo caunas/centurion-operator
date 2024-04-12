@@ -21,9 +21,9 @@ while True:
     if request == 0:
         exit()
     elif request == 1:
-        dmg_inject = int(input("Dano aplicado: "))
-        dmg_block = int(input("Armadura ou Resistência Mágica: "))
-        dmg_bypass = int(input("Letalidade ou Penetração Mágica: "))
+        dmg_inject = float(input("Dano aplicado: "))
+        dmg_block = float(input("Armadura ou Resistência Mágica: "))
+        dmg_bypass = float(input("Letalidade ou Penetração Mágica: "))
         
         response = scr.calcDmg(dmg_inject, scr.calcArmor(dmg_block - dmg_bypass))
         
@@ -34,8 +34,8 @@ while True:
         
     #calcular porcentagem    
     elif request == 2:
-        total_qtd = int(input("Insira a quantidade a ser calculada: "))
-        part = int(input(f"Quantos porcento de {total_qtd} você quer calcular? "))
+        total_qtd = float(input("Insira a quantidade a ser calculada: "))
+        part = float(input(f"Quantos porcento de {total_qtd} você quer calcular? "))
         
         response = scr.percent(part, total_qtd)
         
@@ -66,13 +66,14 @@ while True:
                 
                 print(f'\nDano aplicado: {dmg_inject}')
                 
-                dmg_block = int(input("Armadura ou Resistência Mágica: "))
-                dmg_bypass = int(input("Letalidade ou Penetração Mágica: "))
+                dmg_block = float(input("Armadura ou Resistência Mágica: "))
+                dmg_bypass = float(input("Letalidade ou Penetração Mágica: "))
                 
                 response = scr.calcDmg(dmg_inject, scr.calcArmor(dmg_block - dmg_bypass))
                 
                 print(f"\nDano total recebido: {response} \n")
                 input("Pressione qualquer tecla para continuar...")
+                
                 
                 break
             elif dmg_request == 'n':
